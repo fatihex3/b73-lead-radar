@@ -27,6 +27,7 @@ TELEGRAM
 
 The system is designed to separate actual buyer intent from low-value or irrelevant opportunities.
 
+
 ⚙️ Core Features
 
 - Python-based modular pipeline
@@ -44,11 +45,12 @@ The system is designed to separate actual buyer intent from low-value or irrelev
 🧠 AI Qualification
 
 Default model:
-  nvidia/nemotron-3.5-lightning-30b-a3b
+nvidia/nemotron-3.5-lightning-30b-a3b
   
 Optional deeper model:
-  nvidia/nemotron-3-ultra-550b-a55b
-  
+nvidia/nemotron-3-ultra-550b-a55b
+
+
 The qualifier evaluates signals such as:
 - buyer intent
 - commercial urgency
@@ -56,6 +58,7 @@ The qualifier evaluates signals such as:
 - fixed-price suitability
 - budget signals
 - relevance to web/software development
+
 
 
    🧱 Architecture
@@ -87,6 +90,8 @@ The qualifier evaluates signals such as:
                 ┌──────────────┐
                 │   Telegram   │
                 └──────────────┘
+
+
   
 🛰️ Telegram Commands
 
@@ -112,12 +117,15 @@ Current implementation demonstrates:
   
 The TED collector is included as a reference implementation and may require query tuning depending on the search scope and CPV filters.
 
+
 🧪 Demo Lead
 
 A demo lead can be added with:
-  python seed_test_lead.py
+python seed_test_lead.py
+
 Then analyze it through Telegram:
-  /analyze_new
+/analyze_new
+
 
 🚀 Installation
 
@@ -129,8 +137,6 @@ cd b73-lead-radar
 Create a virtual environment:
 ```
 python3 -m venv venv
-```
-```
 source venv/bin/activate
 ```
 Install dependencies:
@@ -148,6 +154,7 @@ Run:
 python main.py
 ```
 
+
 🔐 Security
 
 Never commit:
@@ -159,6 +166,8 @@ Never commit:
 - production logs
 This repository contains no production credentials.
 
+
+
 🛠️ Tech Stack
 
 - Python
@@ -169,10 +178,12 @@ This repository contains no production credentials.
 - HTTPX
 - OpenAI-compatible API client
 
+
 📌 Project Status
 
 Public portfolio/reference release.
 The production version contains additional reliability, observability, qualification and ingestion safeguards.
+
 
 👨‍💻 Built by
 
