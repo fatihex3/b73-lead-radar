@@ -44,9 +44,11 @@ The system is designed to separate actual buyer intent from low-value or irrelev
 🧠 AI Qualification
 
 Default model:
-nvidia/nemotron-3.5-lightning-30b-a3b
+  nvidia/nemotron-3.5-lightning-30b-a3b
+  
 Optional deeper model:
-nvidia/nemotron-3-ultra-550b-a55b
+  nvidia/nemotron-3-ultra-550b-a55b
+  
 The qualifier evaluates signals such as:
 - buyer intent
 - commercial urgency
@@ -89,7 +91,9 @@ The qualifier evaluates signals such as:
 🛰️ Telegram Commands
 
 /start
+
 /status
+
 /analyze_new
 
 
@@ -97,6 +101,7 @@ The qualifier evaluates signals such as:
 
 The repository includes an experimental collector for the official EU TED procurement search API.
 Current implementation demonstrates:
+
 - official API integration
 - query construction
 - response parsing
@@ -110,25 +115,38 @@ The TED collector is included as a reference implementation and may require quer
 🧪 Demo Lead
 
 A demo lead can be added with:
-python seed_test_lead.py
+  python seed_test_lead.py
 Then analyze it through Telegram:
-/analyze_new
+  /analyze_new
 
 🚀 Installation
 
 Clone the repository:
+```
 git clone https://github.com/fatihex3/b73-lead-radar.git
 cd b73-lead-radar
+```
 Create a virtual environment:
+```
 python3 -m venv venv
+```
+```
 source venv/bin/activate
+```
 Install dependencies:
+```
 pip install -r requirements.txt
+```
 Create your environment file:
+```
 cp .env.example .env
+```
 Add your own credentials to .env.
+
 Run:
+```
 python main.py
+```
 
 🔐 Security
 
@@ -157,5 +175,7 @@ Public portfolio/reference release.
 The production version contains additional reliability, observability, qualification and ingestion safeguards.
 
 👨‍💻 Built by
+
 B73 Digital Studio
+
 https://b73.dev
